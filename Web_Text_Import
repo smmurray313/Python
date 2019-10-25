@@ -1,15 +1,21 @@
-# Import package
+# Import packages
 import requests
+from bs4 import BeautifulSoup
 
-# Specify the url: url
-#url = "http://www.datacamp.com/teach/documentation"
-url = 'paste url here'
+# Specify url: url
+url = 'https://www.python.org/~guido/'
 
-# Packages the request, send the request and catch the response: r
+# Package the request, send the request and catch the response: r
 r = requests.get(url)
 
-# Extract the response: text
-text = r.text
+# Extracts the response as html: html_doc
+html_doc = r.text
 
-# Print the html
-print(text)
+# Create a BeautifulSoup object from the HTML: soup
+soup = BeautifulSoup(html_doc)
+
+# Prettify the BeautifulSoup object: pretty_soup
+pretty_soup = soup.prettify()
+
+# Print the response
+print(pretty_soup)
