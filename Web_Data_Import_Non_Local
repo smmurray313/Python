@@ -1,0 +1,12 @@
+# Import packages
+import pandas as pd
+
+# Assign url of file: url
+#url = 'https://s3.amazonaws.com/assets.datacamp.com/production/course_1606/datasets/winequality-red.csv'
+url = 'paste url link here'
+
+# Read file into a DataFrame: df
+df = pd.read_csv(url, ';')
+
+# Print the head of the DataFrame
+print(df.head())
