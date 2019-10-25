@@ -1,0 +1,13 @@
+def say(message, echo=1):
+    for i in range(1,echo+1):
+        p = str('!')*i
+        print(message + p, end=' ')
+    else:
+        print("")
+        print('Wow what an echo')
+    
+
+message = input("What do you want to yell: ")
+strength = int(input("How many echos do you want: "))
+
+say(message, strength)
