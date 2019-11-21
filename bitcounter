@@ -8,3 +8,7 @@ def countBits(n):
     #len will return the number of digits equal to 1 in bitcount
     return len(bitcount)
     
+#####################
+#better version    
+def countBits(n):
+    return bin(n).count("1")
