@@ -1,0 +1,10 @@
+def countBits(n):
+    #bin function will output bits with Ob as first two digits so start at 3
+    binary = bin(n)[2:]
+    
+    #for each digit in binary, check if it equals 1 and keep as bitcount
+    bitcount = [ones for ones in binary if ones=='1'] 
+    
+    #len will return the number of digits equal to 1 in bitcount
+    return len(bitcount)
+    
